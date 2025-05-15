@@ -16,7 +16,7 @@
 
 - Установите зависимости:pip install -r requirements.txt
 
-- Запустите сбор данных: scripts/ parser.py
+- Запустите сбор данных: scripts/parser.py
 
 - Ознакомтесь с данными: scripts/table.py
 
