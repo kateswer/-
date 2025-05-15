@@ -6,7 +6,7 @@
 
 ## Шаги для запуска проекта:
 
-- Установите зависимости через запуск requirements.txt
+- Установите зависимости:pip install -r requirements.txt
 
 - Запустите сбор данных: scripts/ parser.py
 
