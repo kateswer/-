@@ -4,12 +4,11 @@ import matplotlib.pyplot as plt
 from collections import Counter
 from wordcloud import WordCloud
 
-# Ключевые слова и их переводы
 KEYWORDS = [
     "кроў", "жыццё", "вецер", "зямля", "любоў", "смутак", "вясна", "зімa", "сонца",
     "душа", "сэрца", "боль", "шчасце", "святло", "цені", "надзея", "памяць", "воля"
 ]
-
+# Переводы ключевых слов
 BEL_RU = {
     "кроў": "кровь", "жыццё": "жизнь", "вецер": "ветер", "зямля": "земля", "любоў": "любовь",
     "смутак": "грусть", "вясна": "весна", "зімa": "зима", "сонца": "солнце", "душа": "душа",
@@ -142,7 +141,7 @@ def main():
     top15_rare_words = dict(rare_words_sorted[:15])
     plot_wordcloud(top15_rare_words, title='Облако слов: топ 15 самых редких слов')
 
-    # Анализ по длине и годам (если есть данные)
+    # Анализ по длине и годам 
     df = pd.DataFrame(poems)
     if 'year' in df.columns and 'text' in df.columns:
         df['year'] = pd.to_numeric(df['year'], errors='coerce').astype('Int64')
