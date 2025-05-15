@@ -37,6 +37,9 @@ def get_soup(url):
         return None
 
 def is_poem_page(url):
+    """
+    Проверяет, является ли страница стихотворением
+    """
     soup = get_soup(url)
     if soup is None:
         return False
@@ -47,6 +50,9 @@ def is_poem_page(url):
     return False
 
 def parse_poem_page(url):
+    """
+    Извлекает данные из страницы стихотворений и возвращает словарь с ключами
+    """
     soup = get_soup(url)
     if soup is None:
         return None
@@ -84,6 +90,9 @@ def parse_poem_page(url):
 
 
 def collect_poems(author_key, author_name, limit=101):
+    """
+    Собирает стихи с фильтрацией по ключевым словам
+    """
     author_url = f"{BASE_URL}/{author_key}/"
     soup = get_soup(author_url)
     if soup is None:
