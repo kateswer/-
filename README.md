@@ -18,6 +18,6 @@
 
 - Запустите сбор данных: scripts/ parser.py
 
-- Ознакомтесь с данными (опционально): scripts/table.py
+- Ознакомтесь с данными: scripts/table.py
 
 - Запустите анализ и визуализацию: scripts/visualization.py
